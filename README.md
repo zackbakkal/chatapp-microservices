@@ -29,19 +29,19 @@ In this project I am using microservices, so that any new function could be adde
   Cloud gateway service is the loadbalancer that routes requests to the application services depending on the path used in the URL. This service also registers with the service registry.
 
   * Dependencies
-        ```xml
-	    <dependency>
-		<groupId>org.springframework.cloud</groupId>
-		<artifactId>spring-cloud-starter-gateway</artifactId>
-	    </dependency>
-	    <dependency>
-		<groupId>org.springframework.cloud</groupId>
-		<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-	    </dependency>
-	 ```
+	```xml
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-gateway</artifactId>
+	    	</dependency>
+	    	<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+	    	</dependency>
+	```
 
   * Routes
-        ```yaml
+  	```yaml
 	    spring:
 	      cloud:
 	        gateway:
