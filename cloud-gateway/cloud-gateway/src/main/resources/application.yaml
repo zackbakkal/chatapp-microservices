@@ -12,7 +12,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/chatapp
     username: chatappuser
-    password: Education1
+    password:
     driverClassName: org.postgresql.Driver
   devtools:
     restart:
