@@ -214,6 +214,11 @@ function listUser(user) {
       '<span class="fa-stack"><i class="fa fa-circle-o fa-stack-2x"></i><i class="fa fa-circle fa-stack-2x"></i></span>';
   }
 
+  var avatar = '<img id="' +
+                         user.username +
+                         '-profile-image" src="images/avatar.svg" class="avatar"/>'
+
+  $("#" + user.username).append(avatar);
   $("#" + user.username).append(icon);
   $("#" + user.username).append(user.username);
   $("#" + user.username).attr("tabIndex", tabIndex++);
