@@ -17,12 +17,12 @@ In this project I am using microservices, so that any new function could be adde
 Service registry is the Netflix Eureka service registry, which registers all other services used in the application.
 
 #### dependencies
-    ```xml
+```xml
     <dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-		</dependency>
-    ```
+	<groupId>org.springframework.cloud</groupId>
+	<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+    </dependency>
+```
 
 ### cloud-gateway
 
