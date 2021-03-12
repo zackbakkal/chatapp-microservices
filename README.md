@@ -63,3 +63,32 @@ In this project I am using microservices, so that any new function could be adde
 		      	  predicates:
 		            - Path=/**,/css/**,/js/**
         ```
+
+### security-service
+  This service is used to authenticate users and register new users. When a user first opens the chat application, a login page is provided. In this login page the user can either login or create a new account then login. This service also registers with the service registry.
+  
+  * Dependencies
+	```xml
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+	```
+	
+### user-service
+  The user service handles REST API request to retrieve user(s) info and status (e.g online, offline) , availability (e.g busy, away, etc...), as well as updating these info. Each user has a username that is unique.
+
+### conversation-service
+  The conversation service handles REST API requests to retrieve conversation between two users, and create new conversation for first contact.
+  
+### message-service
+  The message service handles REST API requests to send and retrieve messages sent between users in a conversation.
+  
+### notification-service
+  This service is used to notify users of new messages, and of other user's status and availability.
+
+	
