@@ -1,9 +1,7 @@
 # Chat Application Using Spring Boot
-
 In this project I am using microservices, so that any new function could be added as a new service without affecting other services.
 
 ## Services
-
   * service-registry
   * cloud-gateway
   * security-service
@@ -13,7 +11,6 @@ In this project I am using microservices, so that any new function could be adde
   * notification-service
   
 ### service-registry
-
   Service registry is the Netflix Eureka service registry, which registers all other services used in the application.
 
  * Dependencies
@@ -25,7 +22,6 @@ In this project I am using microservices, so that any new function could be adde
 	```
 
 ### cloud-gateway
-
   Cloud gateway service is the loadbalancer that routes requests to the application services depending on the path used in the URL. This service also registers with the service registry.
 
   * Dependencies
