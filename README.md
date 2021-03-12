@@ -1,6 +1,8 @@
 # Chat Application Using Spring Boot
 In this project I am using microservices, so that any new function could be added as a new service without affecting other services.
 
+![chatapphome](https://user-images.githubusercontent.com/47879637/110917410-1ceff700-82d7-11eb-984b-84258ed991d1.PNG)
+
 ## Services
   * service-registry
   * cloud-gateway
