@@ -38,6 +38,7 @@ In this project I am using microservices, so that any new function could be adde
 		<groupId>org.springframework.cloud</groupId>
 		<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 	    </dependency>
+	 ```
 
   * Routes
         ```yaml
@@ -65,3 +66,4 @@ In this project I am using microservices, so that any new function could be adde
 		      uri: lb://SECURITY-SERVICE
 		      predicates:
 		        - Path=/**,/css/**,/js/**
+        ```
