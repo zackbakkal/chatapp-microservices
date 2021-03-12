@@ -1,0 +1,530 @@
+@charset "ISO-8859-1";
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  height: 100vh;
+}
+
+body {
+  background-color: black;
+  color: white;
+  padding: 0;
+}
+
+.chatapp-container {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.toppane {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: black;
+}
+
+.nav .nav-item {
+  color: white !important;
+}
+
+#logout-button {
+  cursor: pointer;
+}
+
+#username {
+  padding: 2px;
+  font-weight: bold;
+  font-size: 1.5em;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 5px 1px #007bff;
+  box-shadow: 0px 0px 5px 1px #007bff;
+  text-align: center;
+}
+
+#username:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 5px 1px #ffffff;
+  box-shadow: 0px 0px 5px 1px #ffffff;
+}
+
+.leftpane {
+  width: 20%;
+  height: 90%;
+  background-color: #3e3e3e;
+  border-collapse: collapse;
+  margin: 1px;
+  padding: 2px;
+  resize: horizontal;
+  overflow: auto;
+}
+
+.middlepane {
+  width: 80%;
+  height: 90%;
+  background-color: #3e3e3e;
+  border-collapse: collapse;
+  margin-left: 1px;
+  padding: 0;
+}
+
+#online-users-list {
+  padding: 2px;
+  margin: 2px;
+  padding-left: 5px;
+}
+
+#offline-users-list {
+  padding: 2px;
+  margin: 2px;
+  padding-left: 5px;
+}
+
+#messages {
+  height: 100%;
+  background-color: #1f201b;
+  color: black;
+  overflow-y: scroll;
+  margin-bottom: 1px;
+  padding: 10px;
+  padding-top: 0;
+}
+
+#message-send {
+  margin-top: 1px;
+  width: 100%;
+  height: 20%;
+}
+
+#message {
+  width: 80%;
+  height: 70%;
+  margin: 1px;
+  display: inline;
+}
+
+#message textarea {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+  resize: none;
+  padding: 10px;
+}
+
+.emojionearea {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+  resize: none;
+  padding: 10px;
+}
+
+.emojionearea-editor {
+  min-height: 70% !important;
+  max-height: 70% !important;
+}
+
+#options {
+  margin-top: 1px;
+  width: 100%;
+  height: 38%;
+  background-color: #d4edda;
+  padding-top: 0;
+  padding-left: 0;
+  align-items: center;
+}
+
+#options i {
+  color: black;
+  margin: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#send-image-option-button,
+#send-file-option-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  height: 30px;
+}
+
+#send {
+  width: 20%;
+  height: 100%;
+}
+
+#send #send-button {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+}
+
+#send #send-button:hover {
+  background-color: #007bff;
+}
+
+#online-user:hover,
+#offline-user:hover {
+  cursor: pointer;
+}
+
+#users-list {
+  height: 80%;
+  overflow-y: auto;
+  padding: 1px;
+}
+
+.online {
+  color: #00d432;
+}
+
+.offline {
+  color: lightgrey;
+}
+
+.focus {
+  -webkit-box-shadow: 0px 0px 5px 1px #007bff;
+  box-shadow: 0px 0px 5px 1px #007bff;
+  color: #007bff;
+}
+
+#current-recipient {
+  text-align: center;
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(31, 32, 27, 1) 0%,
+    rgba(0, 123, 255, 1) 50%,
+    rgba(31, 32, 27, 1) 100%
+  );
+  margin: 0;
+}
+
+#current-recipient:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(31, 32, 27, 1) 0%,
+    rgba(0, 100, 255, 1) 50%,
+    rgba(31, 32, 27, 1) 100%
+  );
+}
+
+#current-recipient p {
+	margin: 0;
+	cursor: pointer;
+	display: inline;
+}
+
+#current-recipient:hover .tooltiptext {
+    visibility: visible;
+    cursor: pointer;
+}
+
+#current-recipient .tooltiptext {
+	visibility: hidden;
+      width: 120px;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px;
+	  font-size: .8em;
+      margin-left: 5px;
+}
+
+
+
+.user {
+  display: inline-block;
+  background: #3e3e3e;
+  box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
+  vertical-align: middle;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 1px;
+  text-align: left;
+}
+
+.user:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 5px 1px #007bff;
+  box-shadow: 0px 0px 5px 1px #007bff;
+}
+
+#messages #messages-list {
+  list-style: none;
+  list-style-type: none;
+  margin-bottom: 5px;
+  height: 100%;
+  padding: 10px;
+}
+
+#messages #messages-list li {
+  border-radius: 10px;
+  max-width: 70%;
+  min-height: 20px;
+  min-width: 20px;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-bottom: 2px;
+  margin-bottom: 2px;
+  clear: both;
+}
+
+#messages #messages-list li img {
+  width: 100px;
+  height: 100px;
+  margin: 2px !important;
+  border-radius: 2px;
+  border: 1px solid rgb(190, 189, 189) !important;
+  padding: 2px;
+}
+
+#messages #messages-list li a {
+  color: black !important;
+  cursor: pointer !important;
+  padding: 2px;
+}
+
+#messages #messages-list li i {
+  margin-right: 5px;
+}
+
+.welcome {
+  color: white;
+}
+
+.recipientMessage {
+  text-align: left;
+  margin-left: 2px;
+  background-color: #e9e8eb;
+  color: black;
+  float: left;
+  clear: left;
+}
+
+.senderMessage {
+  text-align: left;
+  margin-right: 2px;
+  background-color: #0a80fe;
+  color: white;
+  float: right;
+  clear: right;
+}
+
+.new-message {
+  background: #4b7350 !important;
+}
+
+.send-error {
+  text-align: right;
+  margin-right: 2px;
+  color: red;
+}
+
+.flex-container-main {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 80%;
+}
+
+.flex-container-message-send {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#search-user-container {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+#form-search-user input[type="text"] {
+  border: none;
+  margin-left: 0;
+  flex-wrap: nowrap;
+  height: 30px;
+}
+
+#remove-icon {
+  background: #007bff;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+#remove-icon:hover {
+  cursor: pointer;
+}
+
+.warning {
+  background: #f8d7da;
+  color: #b67b81;
+}
+
+.login-error {
+  margin-top: 5px;
+}
+
+#exclamation-icon {
+  background: #f8d7da;
+  color: #b67b81;
+}
+
+#status {
+  padding: 0;
+}
+
+#status-available {
+  background-color: #d4edda;
+}
+
+#status-away {
+  background-color: #fff3cd;
+}
+
+#status-busy {
+  background-color: #f8d7da;
+}
+
+#status-available:hover {
+  background-color: #00d432;
+}
+
+#status-away:hover {
+  background-color: #ffbf00;
+}
+
+#status-busy:hover {
+  background-color: #ff0019;
+}
+
+#logout-button {
+  background-color: transparent;
+}
+
+.available {
+  color: #00d432;
+}
+
+.fa-circle-o {
+  color: white;
+  z-index: 10;
+}
+
+.away {
+  color: #ffbf00;
+}
+
+.busy {
+  color: #ff0019;
+}
+
+.user span {
+  padding-left: 0;
+  padding-right: 0;
+  width: 0.6em;
+  position: relative;
+  left: -9px;
+  top: -2px;
+}
+
+.user span .fa {
+  font-size: 0.7em !important;
+  padding: 0 !important ;
+  margin-right: 3px;
+  bottom: 0;
+  left: 0;
+}
+
+#offline-users .user .fa-circle {
+  color: grey;
+}
+
+#edit-profile {
+  background-color: transparent !important;
+  cursor: pointer;
+  border: none;
+}
+
+.modal {
+  color: black;
+  background-color: #3e3e3e !important;
+}
+
+.modal i {
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.modal-body div {
+  margin-bottom: 10px;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+#profile-image {
+  border-bottom: 1px solid #e9ecef;
+}
+
+#profile-image img {
+  margin: 5px;
+  width: 100px;
+  height: 100px;
+}
+
+#save-profile-image {
+  margin-bottom: 10px;
+}
+
+#progress {
+  border: 1px solid #0099cc;
+  padding: 1px;
+  position: relative;
+  border-radius: 3px;
+  margin: 10px;
+  text-align: left;
+  background: #fff;
+  box-shadow: inset 1px 3px 6px rgba(0, 0, 0, 0.12);
+}
+#progress .progress-bar-success {
+  height: 20px;
+  border-radius: 3px;
+  background-color: #79f763;
+  /* width: 0; */
+  box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.11);
+}
+#progress .progress-status {
+  top: 3px;
+  left: 50%;
+  position: absolute;
+  display: inline-block;
+  color: #000000;
+}
+
+#temp {
+  min-width: 100px !important;
+  min-height: 50px !important;
+}
