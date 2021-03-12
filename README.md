@@ -16,7 +16,7 @@ In this project I am using microservices, so that any new function could be adde
 
 Service registry is the Netflix Eureka service registry, which registers all other services used in the application.
 
-    #### dependencies
+    * dependencies
 	```xml
 	    <dependency>
 		<groupId>org.springframework.cloud</groupId>
