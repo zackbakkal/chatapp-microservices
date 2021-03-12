@@ -68,7 +68,7 @@ In this project I am using microservices, so that any new function could be adde
   This service is used to authenticate users and register new users. When a user first opens the chat application, a login page is provided. In this login page the user can either login or create a new account then login. This service also registers with the service registry.
   
 ![loginpage](https://user-images.githubusercontent.com/47879637/110915035-68ed6c80-82d4-11eb-8f91-c8230cf700f8.PNG)
-
+![registerpage](https://user-images.githubusercontent.com/47879637/110915684-3001c780-82d5-11eb-9fe8-319b4d0197f4.PNG)
   
   * Dependencies
 	```xml
